@@ -2,3 +2,5 @@
 # it should include the board
 #  - its lists
 #    - the cards for each list
+json.(@board, :title, :user)
+json.lists @board.lists, :title
