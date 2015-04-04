@@ -15,3 +15,26 @@
 
 @import "bootstrap";
 @import "font-awesome";
+
+body {
+  background-color: rgb(14, 116, 175);
+}
+
+ul {
+  list-style: none;
+}
+
+ul.lists li, ul.boards li {
+  float: left;
+  display: block;
+  width: 200px;
+  background-color: rgb(226, 228, 230);
+  margin: 20px;
+  padding: 10px;
+}
+
+ul:after {
+  display: block;
+  content: "";
+  clear: both;
+}
