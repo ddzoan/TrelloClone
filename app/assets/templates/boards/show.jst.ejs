@@ -1,10 +1,4 @@
 <h1><%= board.escape('title') %></h1>
 <ul class="lists">
-  <% board.lists().each(function(list){ %>
-    <li>
-      <%= list.escape('title') %>
-    </li>
-  <% }) %>
-  <li class="new-list"></li>
 </ul>
 <button class="delete btn btn-danger">Delete this Board</button>
