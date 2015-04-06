@@ -73,3 +73,11 @@ div.title {
   font-weight: 600;
   font-size: 18px;
 }
+
+button.card-delete {
+  display: none;
+}
+
+.card:hover button.card-delete {
+  display: inline-block;
+}
