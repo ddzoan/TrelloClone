@@ -80,4 +80,16 @@ button.card-delete {
 
 .card:hover button.card-delete {
   display: inline-block;
+  float: right;
+}
+
+ul.cards {
+  padding: 0px;
+}
+
+.card {
+  margin: 5px;
+  border: 1px solid #ffffff;
+  border-radius: 5px;
+  background-color: white;
 }
