@@ -28,9 +28,24 @@ ul.lists li, ul.boards li {
   float: left;
   display: block;
   width: 200px;
+  height: 40px;
   background-color: rgb(226, 228, 230);
   margin: 20px;
-  padding: 10px;
+  border-radius: 5px;
+  a {
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    font-size: 20px;
+    display: block;
+    height: 100%;
+    width: 100%;
+    padding: 5px;
+  }
+}
+
+ul.boards li:hover {
+
 }
 
 ul:after {
