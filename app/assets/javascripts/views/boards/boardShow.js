@@ -4,32 +4,36 @@ TrelloClone.Views.BoardShow = Backbone.CompositeView.extend ({
     "click .delete": "deleteBoard"
   },
 
-  initialize: function () {
+  initialize: function (){
     this.listenTo(this.model, "sync", this.render);
     this.listenTo(this.model.lists(), "add", this.render);
   },
 
-  render: function () {
+  render: function (){
     var content = this.template({ board: this.model });
     this.$el.html(content);
     this.model.lists().each(function (list) {
       var listItem = new TrelloClone.Views.ListItem({ model: list });
-      this.$('.lists').append(listItem.render().$el);
+      this.$('.lists').prepend(listItem.render().$el);
     });
 
-    // this adds new li with new list form
+    this.addNewListForm();
+
+    return this;
+  },
+
+  addNewListForm: function(){
     var newView = new TrelloClone.Views.ListItem();
     var newListForm = new TrelloClone.Views.ListForm({ model: this.model });
     newView.$el.html(newListForm.render().$el);
     this.$('.lists').append(newView.$el);
-
     return this;
   },
 
   deleteBoard: function (event) {
     event.preventDefault();
     this.model.destroy();
-    this.remove;
+    this.remove();
     Backbone.history.navigate('', { trigger: true });
   }
 });

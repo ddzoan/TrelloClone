@@ -1,6 +1,7 @@
 TrelloClone.Views.ListForm = Backbone.CompositeView.extend({
   template: JST['lists/new'],
-  tagName: 'form',
+  tagName: "form",
+  className: "new-list",
   events: {
     "submit": "newList"
   },
@@ -20,6 +21,6 @@ TrelloClone.Views.ListForm = Backbone.CompositeView.extend({
         this.$('input[name="title"]').val('');
         this.model.lists().add(model);
       }.bind(this)
-    })
+    });
   }
 });

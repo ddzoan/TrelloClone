@@ -20,6 +20,10 @@ body {
   background-color: rgb(14, 116, 175);
 }
 
+a, a:hover {
+  text-decoration: none;
+}
+
 ul {
   list-style: none;
 }
@@ -28,13 +32,15 @@ ul.lists li, ul.boards li {
   float: left;
   display: block;
   width: 200px;
-  height: 40px;
   background-color: rgb(226, 228, 230);
   margin: 20px;
   border-radius: 5px;
+}
+
+ul.boards {
+  height: 40px;
   a {
     text-align: center;
-    text-decoration: none;
     vertical-align: middle;
     font-size: 20px;
     display: block;
@@ -45,11 +51,25 @@ ul.lists li, ul.boards li {
 }
 
 ul.boards li:hover {
+  background-color: #cdd2d4;
+}
 
+ul.lists li {
+  padding: 5px;
 }
 
 ul:after {
   display: block;
   content: "";
   clear: both;
+}
+
+form.new-list {
+  padding: 5px 20px;
+  margin: 0 auto;
+}
+
+div.title {
+  font-weight: 600;
+  font-size: 18px;
 }
