@@ -13,6 +13,9 @@ TrelloClone.Views.ListItem = Backbone.CompositeView.extend ({
 
     this.renderCards();
 
+    $(".sortable").sortable();
+    $(".sortable").disableSelection();
+
     return this;
   },
 
